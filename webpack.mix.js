@@ -19,7 +19,7 @@ let mix = require('laravel-mix');
 //publicDir = '../../Laravel-Projets/site.dev/public_html/wp-content/themes/mossebo';
 
 // Test
-publicDir = 'dist/theme';
+publicDir = 'dist/site';
 
 //MAC CONFIG
 mix.js('src/assets/js/app.js', publicDir + '/assets/js');
