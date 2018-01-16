@@ -30,10 +30,10 @@ mix.sass('src/assets/sass/app.scss', publicDir + '/assets/css')
 mix.sourceMaps();
 mix.copyDirectory('src/assets/fonts', publicDir + '/assets/fonts');
 mix.copyDirectory('src/assets/images', publicDir + '/assets/images');
+mix.copyDirectory('src/template', publicDir);
 mix.autoload({
     jquery: ['$', 'window.jQuery', 'jQuery']
 });
-mix.copyDirectory('src/template', publicDir);
 mix.browserSync({
     proxy: {
         target: "https://site.dev"
