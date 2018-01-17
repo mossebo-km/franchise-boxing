@@ -13,13 +13,13 @@ let mix = require('laravel-mix');
 
 
 // Office
-//publicDir = '../../devsrv/site.dev/public_html/wp-content/themes/mossebo';
+publicDir = '../../devsrv/franchise-boxing.test/public_html';
 
 // Home
 //publicDir = '../../Laravel-Projets/site.dev/public_html/wp-content/themes/mossebo';
 
 // Test
-publicDir = 'dist/site';
+//publicDir = 'dist/site';
 
 //MAC CONFIG
 mix.js('src/assets/js/app.js', publicDir + '/assets/js');
@@ -36,7 +36,7 @@ mix.autoload({
 });
 mix.browserSync({
     proxy: {
-        target: "https://site.dev"
+        target: "https://franchise-boxing.test"
     }
 });
 

@@ -1,9 +1,10 @@
 // Основная ширина контента
-$content_width: 1020px;
+$content_width: 1540px;
 // Цвета
-$color_black: #1d1d1d;
+$color_black: #171616;
 $color_white: #fff;
-$color_gary: #eaeaea;
+$color_gary: #1e1d1d;
+$color_red: #730a11;
 $color_blue: #6d92a6;
 $color_blue2: #38a4de;
 
@@ -14,8 +15,7 @@ $shadow: 0 1px 3px rgba(0, 0, 0, .2);
 // Hover
 $color_hover: rgba(255, 255, 255, 0.2);
 
-$font_main: 'Roboto', sans-serif;
-$font_submain: 'Roboto Slab', serif;
+$font_main: 'Proxima Nova', sans-serif;
 
 $radius: 10px;
 

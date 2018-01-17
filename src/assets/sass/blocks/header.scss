@@ -1,0 +1,32 @@
+.header {
+    background-color: $color_black;
+    background-image: url(/assets/images/header.png);
+    background-position: center center;
+    background-size: cover;
+    height: 775px;
+}
+.block-nav {
+    background: rgba(0,0,0, 0.33);
+    color: $color_white;
+    .logo {
+        display: block;
+        background-image: url(/assets/images/logo.png);
+        width: 215px;
+        height: 29px;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+            padding: 35px 25px;
+            a {
+                color: $color_white;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 100;
+            }
+        }
+    }
+}
