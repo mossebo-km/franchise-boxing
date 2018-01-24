@@ -1,0 +1,21 @@
+.footer {
+    background: $color_black;
+    color: $color_white;
+    padding-top: 25px;
+    padding-bottom: 75px;
+    .block-nav {
+        background: $color_transp;
+        .flex-align-mid {
+            border-bottom: 1px solid $color_white;
+        }
+        li:first-child {
+            padding-left: 0;
+        }
+    }
+}
+.block-copyright {
+    padding-top: 75px;
+    &__text {
+        font-size: 14px;
+    }
+}

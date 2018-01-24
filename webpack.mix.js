@@ -13,10 +13,10 @@ let mix = require('laravel-mix');
 
 
 // Office
-//publicDir = '../../devsrv/franchise-boxing.test/public_html';
+publicDir = '../../devsrv/franchise-boxing.test/public_html';
 
 // Home
-publicDir = '../../Laravel-Projets/franchise-boxing.test/public_html';
+//publicDir = '../../Laravel-Projets/franchise-boxing.test/public_html';
 
 // Test
 //publicDir = 'dist/site';

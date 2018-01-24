@@ -74,3 +74,10 @@ body {
     width: 25%;
     box-sizing: border-box;
 }
+
+a {
+    transition: 0.4s;
+    &:hover {
+        opacity: .6;
+    }
+}
