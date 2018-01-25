@@ -150,6 +150,93 @@
 }
 
 
+.block-history {
+    color: $color_red;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .title {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .sub-title {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 80px;
+    }
+    &__list + &__list {
+        margin-top: 100px;
+    }
+    &__list {
+        text-align: right;
+    }
+    &__num {
+        font-size: 130px;
+    }
+    &__desc {
+        font-size: 25px;
+    }
+    .flex {
+        .col-2:first-child {
+            padding-right: 120px;
+        }
+        .col-2:last-child {
+            padding-left: 120px;
+            border-left: 1px solid $color_red;
+        }
+    }
+    &__list2 {
+        padding-top: 85px;
+        padding-bottom: 85px;
+        &:last-child {
+            .block-history__year {
+                color: $color_red;
+            }
+        }
+    }
+    &__year {
+        font-size: 30px;
+        color: #9d5358;
+        margin-bottom: 10px;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 1px;
+            background: $color_gray;
+            margin-left: -85px;
+            margin-top: 35px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: $color_white;
+            margin-left: -200px;
+            margin-top: 20px;
+        }
+    }
+    &__event {
+        font-size: 30px;
+    }
+}
+
+
+.block-history-2 {
+    text-align: center;
+    background: $color_red;
+    color: $color_white;
+    padding-top: 70px;
+    .sub-title {
+        margin-bottom: 70px;
+    }
+    &__gallery {
+        width: 100%;
+        height: auto;
+        display: block;
+        border: none;
+    }
+}
 
 
 .block-step {
@@ -191,10 +278,15 @@
         .block-step__number {
             color: #1e1d1d;
             left: 155px;
-            top: 72px;
+            top: -35px;
         }
         .col-2:first-child {
             padding-left: 225px;
+        }
+        &-svg {
+            width: 100%;
+            position: absolute;
+            margin-top: -215px;
         }
     }
     &-2 {
@@ -239,10 +331,78 @@
         .block-step__photo {
             margin-left: 15px;
         }
+        &-svg {
+            width: 100%;
+            position: absolute;
+            margin-top: 325px;
+            -moz-transform: scale(-1, 1);
+            -webkit-transform: scale(-1, 1);
+            -o-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
     }
     &-4 {
         .flex-align-mid {
             flex-direction: row-reverse;
+        }
+        .flex {
+            .col-2:first-child {
+                padding-left: 120px;
+            }
+        }
+        .block-step__number {
+            color: #333232;
+            top: 5px;
+            margin-left: -110px;
+        }
+    }
+    &-5 {
+        padding-top: 30px;
+        .flex {
+            .col-2:first-child {
+                text-align: right;
+            }
+        }
+        .block-step__number {
+            color: #62615d;
+            right: 43%;
+            top: 0;
+        }
+        .block-step__name {
+            margin-right: 20px;
+            margin-top: -120px;
+        }
+        .block-step__text {
+            margin-right: 20px;
+            margin-top: 0;
+            float: right;
+        }
+        .block-step__photo {
+            margin-left: 15px;
+        }
+    }
+    &-6 {
+        padding-top: 30px;
+        .flex {
+            .col-2:first-child {
+                padding-left: 160px;
+            }
+        }
+        .block-step__number {
+            color: #503a3d;
+            top: -45px;
+            margin-left: -195px;
+        }
+        .block-step__photo {
+            margin-left: -180px;
+            box-shadow: none;
+        }
+        &-svg {
+            width: 100%;
+            position: absolute;
+            margin-top: -120px;
         }
     }
 }
@@ -256,7 +416,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c1415', endColorstr='#0c0c0c',GradientType=0 );
     text-align: center;
     color: $color_white;
-    padding-top: 120px;
+    padding-top: 320px;
     padding-bottom: 20px;
     .interactive-map {
         margin-top: 55px;
