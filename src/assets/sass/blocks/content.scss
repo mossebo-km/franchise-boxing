@@ -94,6 +94,7 @@
     &-photo {
         height: 400px;
         width: 100%;
+        background-size: cover;
         &-1 {
             background-image: url(/assets/images/wecan-photo-1.jpg);
         }
@@ -146,6 +147,100 @@
             margin-left: auto;
             margin-right: auto;
         }
+    }
+}
+
+.block-reputation {
+    height: 945px;
+}
+
+.brand-photo {
+    position: absolute;
+    left: 50%;
+    &-wrap {
+        width: 1920px;
+        position: relative;
+        left: -960px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: auto;
+    }
+    &-item {
+        width: 374px;
+        height: 305px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        overflow: auto;
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: center center;
+        &_b {
+            width: 425px;
+        }
+        &_s {
+            width: 300px;
+        }
+        &__bg {
+            display: flex;
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            background: rgba(255,255,255,0.6);
+            align-items: center;
+            justify-content: center;
+            transition: .3s;
+        }
+        &:hover {
+            .brand-photo-item__bg {
+                opacity: 0;
+            }
+        }
+    }
+    &__1 {
+        background-image: url(/assets/images/brand-photo/photo__1.jpg);
+    }
+    &__2 {
+        background-image: url(/assets/images/brand-photo/photo__2.jpg);
+    }
+    &__3 {
+        background-image: url(/assets/images/brand-photo/photo__3.jpg);
+    }
+    &__4 {
+        background-image: url(/assets/images/brand-photo/photo__4.jpg);
+    }
+    &__5 {
+        background-image: url(/assets/images/brand-photo/photo__5.jpg);
+    }
+    &__6 {
+        background-image: url(/assets/images/brand-photo/photo__6.jpg);
+    }
+    &__7 {
+        background-image: url(/assets/images/brand-photo/photo__7.jpg);
+    }
+    &__8 {
+        background-image: url(/assets/images/brand-photo/photo__8.jpg);
+    }
+    &__9 {
+        background: $color_red;
+    }
+    &__10 {
+        background-image: url(/assets/images/brand-photo/photo__10.jpg);
+    }
+    &__11 {
+        background-image: url(/assets/images/brand-photo/photo__11.jpg);
+    }
+    &__12 {
+        background-image: url(/assets/images/brand-photo/photo__12.jpg);
+    }
+    &__13 {
+        background-image: url(/assets/images/brand-photo/photo__13.jpg);
+    }
+    &__14 {
+        background-image: url(/assets/images/brand-photo/photo__14.jpg);
+    }
+    &__15 {
+        background-image: url(/assets/images/brand-photo/photo__15.jpg);
     }
 }
 
