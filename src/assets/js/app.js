@@ -23,6 +23,10 @@ import $ from 'jquery';
 
 $(document).ready(function () {
 
-$('body').addClass('active');
+    $('.block-video .button').click(function () {
+        $('.block-video__form').css('display', 'flex');
+        $('.block-video__desc').css('display', 'none');
+    });
+
 
 });

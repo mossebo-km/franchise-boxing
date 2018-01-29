@@ -90,6 +90,17 @@
         height: 400px;
         background-position: center center;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        box-sizing: border-box;
+        text-align: center;
+        color: $color_red;
+        .sub-title {
+            max-width: 70%;
+        }
     }
     &-photo {
         height: 400px;
@@ -108,6 +119,12 @@
     &-middle {
         display: flex;
         flex-direction: column-reverse;
+    }
+    &__icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
     }
 }
 
@@ -186,10 +203,15 @@
             width: inherit;
             height: inherit;
             position: absolute;
-            background: rgba(255,255,255,0.6);
+            background: rgba(255,255,255,0.5);
             align-items: center;
             justify-content: center;
             transition: .3s;
+            img {
+                max-width: 80%;
+                height: auto;
+                display: block;
+            }
         }
         &:hover {
             .brand-photo-item__bg {
@@ -223,6 +245,14 @@
     }
     &__9 {
         background: $color_red;
+        color: $color_white;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     &__10 {
         background-image: url(/assets/images/brand-photo/photo__10.jpg);
@@ -511,7 +541,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c1415', endColorstr='#0c0c0c',GradientType=0 );
     text-align: center;
     color: $color_white;
-    padding-top: 320px;
+    padding-top: 220px;
     padding-bottom: 20px;
     .interactive-map {
         margin-top: 55px;
@@ -524,6 +554,7 @@
     text-align: center;
     padding-top: 35px;
 }
+
 .block-feedback {
     background: #0b0b0b;
     background-image: url(/assets/images/feedback-bg.jpg);
@@ -545,7 +576,7 @@
             background: #0b0b0b;
             color: $color_white;
             font-weight: 100;
-            border: 1px solid $color_white;
+            border: 1px solid rgba(255,255,255,0.7);
         }
         textarea {
             padding: 20px;
@@ -558,14 +589,18 @@
             background: #0b0b0b;
             color: $color_white;
             font-weight: 100;
-            border: 1px solid $color_white;
+            border: 1px solid rgba(255,255,255,0.7);
         }
         button {
-            background: $color_white;
+            background: rgba(255,255,255,0.7);
             color: $color_black;
             padding: 15px 35px;
             cursor: pointer;
             border: none;
+            transition: .3s;
+            &:hover {
+                background: $color_white;
+            }
         }
     }
 }
