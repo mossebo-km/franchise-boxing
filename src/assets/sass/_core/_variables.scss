@@ -58,6 +58,9 @@ body {
     width: $content_width;
     margin: 0 auto;
     position: relative;
+    @media (max-width: 1910px) {
+        width: 95%;
+    }
 
 }
 
@@ -81,4 +84,8 @@ a {
     &:hover {
         opacity: .6;
     }
+}
+
+.animate_scroll {
+
 }
