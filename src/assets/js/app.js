@@ -41,6 +41,8 @@ $(document).ready(function () {
         $('.block-video__desc').hide(100);
     });
 
+
+
     // Высчитывание ширины фоток в блоке репутация
     var DeviceWidth = $(window).width();
     $('.brand-photo-wrap').css('width', DeviceWidth).css('left',(-DeviceWidth/2));

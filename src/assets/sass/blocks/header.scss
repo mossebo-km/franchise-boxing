@@ -8,16 +8,32 @@
 .block-nav {
     background: rgba(0,0,0, 0.33);
     color: $color_white;
+    @media (max-width: 1000px) {
+        .flex {
+            text-align: right;
+        }
+    }
     .logo {
         display: block;
         background-image: url(/assets/images/logo.png);
+        background-size: cover;
+        background-position: center center;
         width: 215px;
         height: 29px;
+        @media (max-width: 1000px) {
+            display: inline-block;
+            width: 160px;
+            height: 21px;
+            margin: 12px;
+        }
     }
     ul {
         padding: 0;
         margin: 0;
         list-style: none;
+        @media (max-width: 1000px) {
+            display: none;
+        }
         li {
             display: inline-block;
             padding: 35px 25px;
