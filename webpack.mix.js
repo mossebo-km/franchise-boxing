@@ -27,7 +27,6 @@ mix.sass('src/assets/sass/app.scss', publicDir + '/assets/css')
     .options({
         processCssUrls: false
     });
-mix.sourceMaps();
 mix.copyDirectory('src/assets/fonts', publicDir + '/assets/fonts');
 mix.copyDirectory('src/assets/images', publicDir + '/assets/images');
 mix.copyDirectory('src/template', publicDir);
@@ -42,4 +41,11 @@ mix.browserSync({
 
 mix.setResourceRoot(path.normalize(publicDir));
 mix.setPublicPath(path.normalize(publicDir));
+
+if (!mix.inProduction()) {
+    mix.webpackConfig({
+        devtool: 'source-map'
+    })
+        .sourceMaps()
+}
 

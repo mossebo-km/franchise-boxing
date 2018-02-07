@@ -15,16 +15,18 @@ import $ from 'jquery';
 //
 
 
-
-
 //
 // Costume Scripts
 //
 
+
 $(document).ready(function () {
 
+    var DeviceWidth = $(window).width();
+
+
     // Плавная прокрутка к якорю
-    $(".nav a").bind("click", function(e){
+    $(".nav a").bind("click", function (e) {
         var anchor = $(this);
         var name = anchor.attr("href").replace(new RegExp("#", "gi"), "");
         $('html, body').stop().animate({
@@ -42,14 +44,33 @@ $(document).ready(function () {
     });
 
 
-
     // Высчитывание ширины фоток в блоке репутация
-    var DeviceWidth = $(window).width();
-    $('.brand-photo-wrap').css('width', DeviceWidth).css('left',(-DeviceWidth/2));
-    $('.brand-photo-item_b').css('width',(DeviceWidth-40)/10*2.33333);
-    $('.brand-photo-item_s').css('width',(DeviceWidth-40)/10*1.5);
+    $('.brand-photo-wrap').css('width', DeviceWidth).css('left', (-DeviceWidth / 2));
+    $('.brand-photo-item_b').css('width', (DeviceWidth - 40) / 10 * 2.33333);
+    $('.brand-photo-item_s').css('width', (DeviceWidth - 40) / 10 * 1.5);
 
+    if (DeviceWidth < 1000) {
+        //Расчет отсупов в блоках с картинкой
+        var ImageHeight1 = $('.block-bizprocess .full-width-img').height();
+        if (DeviceWidth < 400) {
+            ImageHeight1 = ImageHeight1 + 20;
+        }
+        $('.block-bizprocess__text-item').css('top', ImageHeight1);
+
+
+        var ImageHeight2 = $('.block-sellfranchise .full-width-img').height();
+        if (DeviceWidth < 400) {
+            ImageHeight2 = ImageHeight2 + 20;
+        }
+        $('.block-sellfranchise__text-item').css('top', ImageHeight1);
+
+
+        var ImageHeight3 = $('.block-digitalmark .full-width-img').height() + 20;
+        if (DeviceWidth < 400) {
+            ImageHeight3 = ImageHeight3;
+        }
+        $('.block-digitalmark__text-item').css('top', ImageHeight3);
+    }
 
 
 });
-

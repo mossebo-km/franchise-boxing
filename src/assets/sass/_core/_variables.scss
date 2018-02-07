@@ -5,6 +5,7 @@ $color_black: #171616;
 $color_white: #fff;
 $color_gray: #1e1d1d;
 $color_red: #730a11;
+$color_red2: #e30918;
 $color_blue: #6d92a6;
 $color_blue2: #38a4de;
 
@@ -42,6 +43,12 @@ body {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
+        @media (max-width: 1000px) {
+            font-size: 30px;
+            line-height: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
     .sub-title {
         font-size: 20px;
@@ -51,6 +58,12 @@ body {
         margin-left: auto;
         margin-right: auto;
         opacity: .8;
+        @media (max-width: 1000px) {
+            font-size: 16px;
+            line-height: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 }
 
@@ -61,7 +74,11 @@ body {
     @media (max-width: 1910px) {
         width: 95%;
     }
-
+    @media (max-width: 1000px) {
+        width: 304px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .col-2 {
@@ -88,4 +105,16 @@ a {
 
 .animate_scroll {
 
+}
+
+.mobile_hide {
+    @media (max-width: 1000px) {
+        display: none;
+    }
+}
+.mobile_show {
+    display: none;
+    @media (max-width: 1000px) {
+        display: block;
+    }
 }
