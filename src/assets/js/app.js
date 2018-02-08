@@ -45,9 +45,11 @@ $(document).ready(function () {
 
 
     // Высчитывание ширины фоток в блоке репутация
-    $('.brand-photo-wrap').css('width', DeviceWidth).css('left', (-DeviceWidth / 2));
-    $('.brand-photo-item_b').css('width', (DeviceWidth - 40) / 10 * 2.33333);
-    $('.brand-photo-item_s').css('width', (DeviceWidth - 40) / 10 * 1.5);
+    if(DeviceWidth>1000) {
+        $('.brand-photo-wrap').css('width', DeviceWidth).css('left', (-DeviceWidth / 2));
+        $('.brand-photo-item_b').css('width', (DeviceWidth - 40) / 10 * 2.33333);
+        $('.brand-photo-item_s').css('width', (DeviceWidth - 40) / 10 * 1.5);
+    }
 
     if (DeviceWidth < 1000) {
         //Расчет отсупов в блоках с картинкой
