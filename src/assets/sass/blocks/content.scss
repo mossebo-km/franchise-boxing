@@ -171,6 +171,8 @@
     background: $color_white;
     @media (max-width: 1000px) {
         .col-3 {
+            max-width: 350px;
+            width: 100%;
             margin-left: auto;
             margin-right: auto;
         }
@@ -189,7 +191,7 @@
         text-align: center;
         color: $color_red;
         @media (max-width: 1000px) {
-            height: 350px;
+            height: 300px;
             padding: 15px 0;
         }
         .sub-title {
@@ -205,7 +207,7 @@
         background-size: cover;
         background-position: center center;
         @media (max-width: 1000px) {
-            height: 170px;
+            height: 200px;
         }
         &-1 {
             background-image: url(/assets/images/wecan-photo-1.jpg);
@@ -308,7 +310,7 @@
     height: 945px;
     overflow: hidden;
     @media (max-width: 1000px) {
-
+        display: none;
     }
 }
 
@@ -440,11 +442,18 @@
     .title {
         margin-left: 0;
         margin-right: 0;
+        @media (max-width: 1000px) {
+            text-align: center;
+        }
     }
     .sub-title {
         margin-left: 0;
         margin-right: 0;
         margin-bottom: 80px;
+        @media (max-width: 1000px) {
+            text-align: center;
+            margin-bottom: 60px;
+        }
     }
     &__list + &__list {
         margin-top: 100px;
@@ -546,10 +555,13 @@
     color: $color_white;
     padding-top: 70px;
     @media (max-width: 1000px) {
-
+        padding-top: 35px;
     }
     .sub-title {
         margin-bottom: 70px;
+        @media (max-width: 1000px) {
+            margin-bottom: 35px;
+        }
     }
     &__gallery {
         width: 100%;
@@ -567,7 +579,7 @@
     padding-top: 30px;
     padding-bottom: 30px;
     @media (max-width: 1000px) {
-
+        display: none;
     }
     .title {
         padding: 15px 0;
@@ -778,7 +790,7 @@
     padding-top: 220px;
     padding-bottom: 20px;
     @media (max-width: 1000px) {
-
+        padding-top: 35px;
     }
     .interactive-map {
         margin-top: 55px;
@@ -810,13 +822,25 @@
         height: 600px;
     }
     @media (max-width: 1000px) {
-
+        background-image: url(/assets/images/feedback-bg_mobile.png);
+        background-position: center -15px;
+        background-size: 320px auto;
+        background-repeat: no-repeat;
     }
     &__form {
         width: 345px;
         position: absolute;
         right: 0;
         padding-top: 210px;
+        @media (max-width: 1000px) {
+            width: 260px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            button {
+                width: 100%;
+            }
+        }
         input {
             padding: 20px;
             display: block;

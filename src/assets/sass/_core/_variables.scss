@@ -109,7 +109,7 @@ a {
 
 .mobile_hide {
     @media (max-width: 1000px) {
-        display: none;
+        display: none !important;
     }
 }
 .mobile_show {
