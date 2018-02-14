@@ -11,7 +11,7 @@
         background: none;
         height: auto;
         .block-video-mobile {
-            display: block;
+            display: none;
             background-image: url(/assets/images/header.jpg);
             background-position: center center;
             background-size: cover;
@@ -87,7 +87,7 @@
             float: none;
             height: auto;
             position: relative;
-            padding: 55px 20px;
+            padding: 85px 20px;
             display: block;
         }
         &-title {
@@ -184,7 +184,7 @@
             float: none;
             height: auto;
             position: relative;
-            padding: 40px 0 10px;
+            padding: 75px 0 10px;
             background: rgba(0,0,0,0.4);
             .block-video__form-warp {
                 max-width: 304px;

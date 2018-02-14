@@ -44,10 +44,11 @@
             </div>
             <div class="block-video__form">
                 <div class="block-video__form-title">Оставить заявку</div>
-                <form action="" class="block-video__form-warp">
-                    <input type="text" placeholder="Ваше имя" name="name">
-                    <input type="tel" placeholder="Ваш телефон" name="tel">
-                    <input type="email" placeholder="E-mail" name="email">
+                <form class="block-video__form-warp feedback__form" data-form-place="header_form">
+                    <input type="text" placeholder="Ваше имя" name="contact_name">
+                    <input type="tel" placeholder="Ваш телефон" name="contact_phone">
+                    <input type="email" placeholder="E-mail" name="contact_email">
+                    <input type="text" placeholder="Город" name="contact_sity">
                     <div class="block-video__form-desc">Мы гарантируем конфиденциальность<br>
                         ваших данных и защиту от спама</div>
                     <button type="submit" class="button">Отправить</button>

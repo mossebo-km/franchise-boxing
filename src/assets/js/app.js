@@ -75,4 +75,35 @@ $(document).ready(function () {
     }
 
 
+    $('.feedback__form').submit(function (event) {
+        event.preventDefault();
+        var thisElem = this;
+        // send
+        $.ajax({
+            method: 'POST',
+            url: '/amo_api.php',
+            data: {
+                // Имя
+                contact_name: $(thisElem).find('input[name="contact_name"]').val(),
+                // Email
+                contact_email: $(thisElem).find('input[name="contact_email"]').val(),
+                // Телефон
+                contact_phone: $(thisElem).find('input[name="contact_phone"]').val(),
+                // Текст сообщения
+                message: $(thisElem).find('textarea[name="feedback-form__text"]').val() + ' ',
+                // URL страницы
+                urlPage: document.location.href,
+                // Имя формы
+                form_name: thisElem.getAttribute('data-form-place'),
+                // Геолокация
+                contact_sity: $(thisElem).find('input[name="contact_sity"]').val(),
+            }
+        })
+            .done(function () {
+                alert('Отправлено');
+            });
+
+    });
+
+
 });
