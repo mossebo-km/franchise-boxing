@@ -10,6 +10,8 @@
 
 import $ from 'jquery';
 
+import axios from 'axios';
+
 //
 // Import Scripts
 //
@@ -75,35 +77,54 @@ $(document).ready(function () {
     }
 
 
-    $('.feedback__form').submit(function (event) {
+    $('.feedback__form .button').click(function (event) {
         event.preventDefault();
-        var thisElem = this;
-        // send
-        $.ajax({
-            method: 'POST',
-            url: '/amo_api.php',
-            data: {
-                // Имя
-                contact_name: $(thisElem).find('input[name="contact_name"]').val(),
-                // Email
-                contact_email: $(thisElem).find('input[name="contact_email"]').val(),
-                // Телефон
-                contact_phone: $(thisElem).find('input[name="contact_phone"]').val(),
-                // Текст сообщения
-                message: $(thisElem).find('textarea[name="feedback-form__text"]').val() + ' ',
-                // URL страницы
+
+        axios.get('/amo_api.php', {
+            params: {
+                contact_name: $('.feedback__form').find('input[name="contact_name"]').val(),
+                contact_email: $('.feedback__form').find('input[name="contact_email"]').val(),
+                contact_phone: $('.feedback__form').find('input[name="contact_phone"]').val(),
+                contact_sity: $('.feedback__form').find('input[name="contact_sity"]').val(),
+                form_name: $('.feedback__form').find('input[name="form_name"]').val(),
                 urlPage: document.location.href,
-                // Имя формы
-                form_name: thisElem.getAttribute('data-form-place'),
-                // Геолокация
-                contact_sity: $(thisElem).find('input[name="contact_sity"]').val(),
+
             }
         })
-            .done(function () {
-                alert('Отправлено');
+            .then(function (response) {
+                //console.log(response);
+                $('.block-video__form').hide(100);
+                $('.block-video__desc').css('display', 'flex').show(100);
+            })
+            .catch(function (error) {
+                //console.log(error);
+            });
+
+    });
+
+    $('.feedback__form_footer .button').click(function (event) {
+        event.preventDefault();
+
+        axios.get('/amo_api.php', {
+            params: {
+                contact_name: $('.feedback__form_footer').find('input[name="contact_name"]').val(),
+                contact_email: $('.feedback__form_footer').find('input[name="contact_email"]').val(),
+                contact_phone: $('.feedback__form_footer').find('input[name="contact_phone"]').val(),
+                contact_sity: $('.feedback__form_footer').find('input[name="contact_sity"]').val(),
+                form_name: $('.feedback__form_footer').find('input[name="form_name"]').val(),
+                urlPage: document.location.href,
+            }
+        })
+            .then(function (response) {
+                //console.log(response);
+            })
+            .catch(function (error) {
+                //console.log(error);
             });
 
     });
 
 
 });
+
+

@@ -1,3 +1,12 @@
+<?php
+// utm
+if ( isset( $_GET[ 'utm_source' ] ) && !isset( $_COOKIE[ 'utm_source' ] ) ) setcookie( 'utm_source', $_GET[ 'utm_source' ], time()+500000, '/' );
+if ( isset( $_GET[ 'utm_medium' ] ) && !isset( $_COOKIE[ 'utm_medium' ] ) ) setcookie( 'utm_medium', $_GET[ 'utm_medium' ], time()+500000, '/' );
+if ( isset( $_GET[ 'utm_campaign' ] ) && !isset( $_COOKIE[ 'utm_campaign' ] ) ) setcookie( 'utm_campaign', $_GET[ 'utm_campaign' ], time()+500000, '/' );
+if ( isset( $_GET[ 'utm_content' ] ) && !isset( $_COOKIE[ 'utm_content' ] ) ) setcookie( 'utm_content', $_GET[ 'utm_content' ], time()+500000, '/' );
+if ( isset( $_GET[ 'utm_term' ] ) && !isset( $_COOKIE[ 'utm_term' ] ) ) setcookie( 'utm_term', $_GET[ 'utm_term' ], time()+500000, '/' );
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -44,11 +53,11 @@
             </div>
             <div class="block-video__form">
                 <div class="block-video__form-title">Оставить заявку</div>
-                <form class="block-video__form-warp feedback__form" data-form-place="header_form">
+                <form class="block-video__form-warp feedback__form">
+                    <input type="hidden" value="header_form" name="form_name" hidden>
                     <input type="text" placeholder="Ваше имя" name="contact_name">
                     <input type="tel" placeholder="Ваш телефон" name="contact_phone">
                     <input type="email" placeholder="E-mail" name="contact_email">
-                    <input type="text" placeholder="Город" name="contact_sity">
                     <div class="block-video__form-desc">Мы гарантируем конфиденциальность<br>
                         ваших данных и защиту от спама</div>
                     <button type="submit" class="button">Отправить</button>
@@ -492,11 +501,11 @@
 
 <div class="blocks block-feedback">
     <div class="wrap">
-        <form action="" class="block-feedback__form">
-            <input type="text" placeholder="Ваше имя" name="name">
-            <input type="tel" placeholder="Ваш телефон" name="tel">
-            <textarea placeholder="Ваше сообщение"></textarea>
-            <button type="submit">Заказть звонок</button>
+        <form class="block-feedback__form feedback__form_footer">
+            <input type="hidden" value="footer_form" name="form_name" hidden>
+            <input type="text" placeholder="Ваше имя" name="contact_name">
+            <input type="tel" placeholder="Ваш телефон" name="contact_phone">
+            <button type="submit" class="button">Отправить</button>
         </form>
     </div>
 </div>
