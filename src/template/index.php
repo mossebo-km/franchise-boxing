@@ -15,6 +15,8 @@ if ( isset( $_GET[ 'utm_term' ] ) && !isset( $_COOKIE[ 'utm_term' ] ) ) setcooki
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="/assets/css/app.css">
+    <!-- Icon in the highest resolution we need it for -->
+    <link rel="icon" sizes="32x32" href="/assets/images/favicon_hb.png">
 </head>
 <body>
 <header class="header">
