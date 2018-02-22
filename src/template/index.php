@@ -1,10 +1,12 @@
 <?php
+
 // utm
-if ( isset( $_GET[ 'utm_source' ] ) && !isset( $_COOKIE[ 'utm_source' ] ) ) setcookie( 'utm_source', $_GET[ 'utm_source' ], time()+500000, '/' );
-if ( isset( $_GET[ 'utm_medium' ] ) && !isset( $_COOKIE[ 'utm_medium' ] ) ) setcookie( 'utm_medium', $_GET[ 'utm_medium' ], time()+500000, '/' );
-if ( isset( $_GET[ 'utm_campaign' ] ) && !isset( $_COOKIE[ 'utm_campaign' ] ) ) setcookie( 'utm_campaign', $_GET[ 'utm_campaign' ], time()+500000, '/' );
-if ( isset( $_GET[ 'utm_content' ] ) && !isset( $_COOKIE[ 'utm_content' ] ) ) setcookie( 'utm_content', $_GET[ 'utm_content' ], time()+500000, '/' );
-if ( isset( $_GET[ 'utm_term' ] ) && !isset( $_COOKIE[ 'utm_term' ] ) ) setcookie( 'utm_term', $_GET[ 'utm_term' ], time()+500000, '/' );
+if(isset( $_GET['utm_source']) && !isset($_COOKIE['utm_source'])) setcookie('utm_source', $_GET['utm_source'], time()+500000, '/');
+if(isset( $_GET['utm_medium']) && !isset($_COOKIE['utm_medium'])) setcookie('utm_medium', $_GET['utm_medium'], time()+500000, '/');
+if(isset( $_GET['utm_campaign']) && !isset($_COOKIE['utm_campaign'])) setcookie('utm_campaign', $_GET['utm_campaign'], time()+500000, '/');
+if(isset( $_GET['utm_content']) && !isset($_COOKIE['utm_content'])) setcookie('utm_content', $_GET['utm_content'], time()+500000, '/');
+if(isset( $_GET['utm_term']) && !isset($_COOKIE['utm_term'])) setcookie('utm_term', $_GET['utm_term'], time()+500000, '/');
+
 ?>
 
 <!DOCTYPE html>
